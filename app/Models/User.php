@@ -51,6 +51,6 @@ class User extends Authenticatable
 
     public function statuses()
     {
-        return $this->hasMany(statuses::class);
+        return $this->hasMany(Status::class);
     }
 }
