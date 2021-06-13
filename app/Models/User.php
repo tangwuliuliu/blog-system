@@ -48,4 +48,9 @@ class User extends Authenticatable
         $hash=md5(strtolower(trim($this->attributes['email'])));
         return "/avatars/$hash.jpg";
     }
+
+    public function statuses()
+    {
+        return $this->hasMany(statuses::class);
+    }
 }
