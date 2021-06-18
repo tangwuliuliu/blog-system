@@ -48,6 +48,7 @@ class User extends Authenticatable
     {
         // $hash=md5(strtolower(trim($this->attributes['email'])));
         $hash=$this->id;
+        $hash=$hash%10+1;
         return "/avatars/$hash.jpg";
     }
 
