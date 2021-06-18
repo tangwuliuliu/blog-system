@@ -15,4 +15,9 @@ class Status extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment','status_id','id')->orderBy('created_at',desc);
+    }
 }
